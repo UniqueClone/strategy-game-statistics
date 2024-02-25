@@ -5,7 +5,7 @@ export interface MapDetails {
     /**
      * The name of the map.
      */
-    map: string;
+    name: string;
     /**
      * Indicates whether the map is the free map of the week.
      */

@@ -3,13 +3,13 @@ import { MapDetails } from "./MapDetails";
 /**
  * Sets the map name in the map details object.
  * 
- * @param map - The new map name.
+ * @param name - The new map name.
  * @param mapDetails - The current map details object.
  * @param setMapDetails - The function to update the map details object.
  * @returns void
  */
-export const setMapName = (map: string, mapDetails: MapDetails, setMapDetails: (value: MapDetails) => void) => {
-    setMapDetails({...mapDetails, map});
+export const setMapName = (name: string, mapDetails: MapDetails, setMapDetails: (value: MapDetails) => void) => {
+    setMapDetails({...mapDetails, name});
 };
 
 /**
