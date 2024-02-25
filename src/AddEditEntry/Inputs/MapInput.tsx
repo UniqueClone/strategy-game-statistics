@@ -2,11 +2,27 @@ import { setIsFreeMap, setMapName } from "./MapInput.mappers";
 import { MapDetails } from "./MapDetails";
 import { TextInput } from "./TextInput";
 
+/**
+ * The props for the MapInput component.
+ */
 interface MapInputProps {
+    /**
+     * The details of the map that was played.
+     */
     mapDetails: MapDetails;
+
+    /**
+     * A function to update the map details object.
+     * @param value - The new map details object.
+     */
     setMapDetails: (value: MapDetails) => void;
 }
 
+/**
+ * The component to input the details of the map that was played.
+ * @param props - The props for the MapInput component.
+ * @returns The MapInput component.
+ */
 export const MapInput: React.FC<MapInputProps> = (props: MapInputProps) => {
     const { mapDetails, setMapDetails } = props;
 
@@ -15,7 +31,7 @@ export const MapInput: React.FC<MapInputProps> = (props: MapInputProps) => {
             <label className="flex flex-col">
                 <span className="mb-1">Map:</span>
                 <TextInput
-                    value={mapDetails.map}
+                    value={mapDetails.name}
                     onChange={(value: string) =>
                         setMapName(value, mapDetails, setMapDetails)
                     }
@@ -26,9 +42,9 @@ export const MapInput: React.FC<MapInputProps> = (props: MapInputProps) => {
                 <input
                     type="checkbox"
                     checked={mapDetails.isFreeMapOfTheWeek}
-                    onChange={() =>
+                    onChange={(value) =>
                         setIsFreeMap(
-                            !mapDetails.isFreeMapOfTheWeek,
+                            value.target.checked,
                             mapDetails,
                             setMapDetails
                         )
