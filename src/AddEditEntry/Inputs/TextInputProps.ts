@@ -5,13 +5,13 @@ export interface TextInputProps {
     /**
      * The current value of the text input.
     */
-   value: string;
+    value: string;
 
    /**
     * A callback function that is called when the value of the text input changes.
     * @param value - The new value of the text input.
    */
-  onChange: (value: string) => void;
+    onChange: (value: string) => void;
 
     /**
      * An optional class name for the text input.
