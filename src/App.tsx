@@ -1,11 +1,19 @@
 import "./App.css";
-import { WinsLossesChart } from "./WinsLossesChart";
+import {
+    firstPlaceMockdata,
+    gamesPlayedMockdata,
+} from "./ChartData/MyChart.mockdata";
+import { PlacementCharts } from "./sections/PlacementCharts";
+import { GamesPlayed } from "./sections/GamesPlayed";
 
 function App() {
     return (
-        <>
-            <WinsLossesChart />
-        </>
+        <div>
+            {/* <PlacementsBarChart /> */}
+            <PlacementCharts placementData={firstPlaceMockdata} />
+            <GamesPlayed gamesPlayed={gamesPlayedMockdata} />
+            {/* {<AddEditEntry />} */}
+        </div>
     );
 }
 
