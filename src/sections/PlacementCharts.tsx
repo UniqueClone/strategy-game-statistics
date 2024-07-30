@@ -2,7 +2,7 @@ import {
     secondPlaceMockdata,
     thirdPlaceMockdata,
 } from "../ChartData/MyChart.mockdata";
-import { PieChart } from "../charts/PieChart";
+import { PieChartRENAME } from "../charts/PieChart";
 
 export interface PlacementChartsProps {
     placementData: any;
@@ -25,9 +25,9 @@ export const PlacementCharts: React.FC<PlacementChartsProps> = (props) => {
             {/* <PieChart label={"Wins"} data={placementData} />
             <PieChart label={"2nd Place"} data={placementData} />
             <PieChart label={"3rd Place (Loser)"} data={placementData} /> */}
-            <PieChart label={"Wins"} data={placementData} />
-            <PieChart label={"2nd Place"} data={secondPlaceMockdata} />
-            <PieChart label={"3rd Place (Loser)"} data={thirdPlaceMockdata} />
+            <PieChartRENAME label={"Wins"} data={placementData} />
+            <PieChartRENAME label={"2nd Place"} data={secondPlaceMockdata} />
+            <PieChartRENAME label={"3rd Place (Loser)"} data={thirdPlaceMockdata} />
         </div>
     );
 };

@@ -4,14 +4,14 @@ import {
     gamesPlayedMockdata,
 } from "./ChartData/MyChart.mockdata";
 import { PlacementCharts } from "./sections/PlacementCharts";
-import { GamesPlayed } from "./sections/GamesPlayed";
+// import { GamesPlayed } from "./sections/GamesPlayed";
 
 function App() {
     return (
         <div>
             {/* <PlacementsBarChart /> */}
             <PlacementCharts placementData={firstPlaceMockdata} />
-            <GamesPlayed gamesPlayed={gamesPlayedMockdata} />
+            {/* <GamesPlayed gamesPlayed={gamesPlayedMockdata} /> */}
             {/* {<AddEditEntry />} */}
         </div>
     );

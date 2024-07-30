@@ -1,34 +1,23 @@
-import { Chart } from "react-google-charts";
+import { PieChart } from "@fluentui/react-charting";
 
 interface PieChartProps {
     label: string;
     data: any;
 }
 
-export const PieChart: React.FC<PieChartProps> = (props: PieChartProps) => {
+export const PieChartRENAME: React.FC<PieChartProps> = (props: PieChartProps) => {
     const { data, label } = props;
 
+    const points = [
+        { y: 50, x: 'ABCD' },
+        { y: 25, x: 'EFGH' },
+        { y: 25, x: 'IJKL' },
+      ];
+
     return (
-        // <div style={{ width: "33%", height: "33%" }}>
-        <Chart
-            chartType="PieChart"
-            data={data}
-            width={"400px"}
-            height={"400px"}
-            legendToggle
-            options={{
-                title: label,
-                titleTextStyle: {
-                    fontSize: 24,
-                },
-                legend: {
-                    position: "bottom",
-                    textStyle: {
-                        // fontSize: 18,
-                    },
-                },
-            }}
-        />
-        // </div>
+        <PieChart data={points}
+        height={300}
+        width={300}
+         />
     );
 };
